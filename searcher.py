@@ -1,9 +1,9 @@
-version = 1.0
 import pathlib
-import shutil
-import os 
 import gzip
 import time
+
+VERSION = 1.0
+
 sline = ('\n' + '--------------------------------' + '\n')
 print(sline)
 log_folder = input('請輸入 log 路徑: ')
@@ -29,7 +29,7 @@ print(sline)
 
 while True:
     search = input('關鍵字搜尋，輸入 q 結束: ')
-    print (sline)
+    print(sline)
 
     if search == 'q':
         break
@@ -41,9 +41,10 @@ while True:
                 result.append(file + line) 
 
     for i in result:
-        print(i + "\n")A
+        print(i + "\n")
 
-    print('共有',len(result),'筆資料提到:', search)
+    print('共有', len(result), '筆資料提到:', search)
     print(sline)
+
 print('感謝您使用由 Nekoret 所製作的搜尋功能')
 print(sline)
